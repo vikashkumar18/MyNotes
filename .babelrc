@@ -1,3 +1,6 @@
+/*
+  babel-preset-es2015-node uses babel for features which latest node version does not support
+ */
 {
   "presets": ["es2015-node"]
 }
