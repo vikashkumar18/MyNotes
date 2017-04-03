@@ -1,14 +1,3 @@
+import SequentialSearch from './src/search/sequentialSearch';
 
-'use strict';
-
-class Index {
-  constructor() {
-    this.x = 10;
-  }
-  print() {
-    console.log(this.x);
-  }
-}
-
-const x = new Index();
-x.print();
+console.log(SequentialSearch([1, 3, 4], 4));
