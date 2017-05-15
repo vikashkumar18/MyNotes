@@ -11,3 +11,7 @@ go through node guide to understand event loop https://nodejs.org/en/docs/guides
   - `> pwd` should give `/fork/MyNotes`
   - `/fork/MyNotes> ./node_modules/eslint/bin/eslint.js --init`
   - follow the prompts
+3. [GitHub Pages](https://help.github.com/categories/github-pages-basics/) is used to generate documents
+  -  `./node_modules/.bin/jsdoc </path/to/*.js> -d docs` creates static html document in `docs` folder for the specified file.
+
+Creating HTML docs is manual process right now, but will be addressed and made automatic npm task in future [#issue](https://github.com/vikashkumar18/MyNotes/issues/1).
