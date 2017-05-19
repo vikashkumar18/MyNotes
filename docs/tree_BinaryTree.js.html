@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: sort/BubbleSort.js</title>
+    <title>JSDoc: Source: tree/BinaryTree.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: sort/BubbleSort.js</h1>
+    <h1 class="page-title">Source: tree/BinaryTree.js</h1>
 
     
 
@@ -27,37 +27,65 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import 'babel-polyfill';
-
-const swap = (list, pos, nextPos) => {
-  const immutableList = Object.assign([], list);
-  const temp = immutableList[nextPos];
-  immutableList[nextPos] = immutableList[pos];
-  immutableList[pos] = temp;
-  return immutableList;
-};
+/* eslint-disable no-param-reassign */
 /**
- * Takes a list of values and returns a sorted list
- * @param {Array} list a collection of Number | String
+ * TBD: add notes
  */
-const BubbleSort = list => {
-  let immutableList = Object.assign([], list);
-  const length = immutableList.length;
-  for (let i = 0; i &lt; length; i += 1) {
-    // j stands for the number of comparisins to be done
-    // 1. in the first pass there are n items so (n-1) no of comparisons
-    // will be done
-    // 2. in the second pass the last item is already in place so n-1 items
-    // are left to be sorted so (n-2) no of comparisons has to be done
-    for (let j = 0; j &lt; length - i - 1; j += 1) {
-      if (immutableList[j] > immutableList[j + 1]) {
-        immutableList = swap(immutableList, j, j + 1);
-      }
-    }
+class BinaryTree {
+  constructor(root) {
+    this.key = root;
+    this.leftChild = null;
+    this.rightChild = null;
+    this.parent = null;
   }
-  return immutableList;
-};
+  insertLeft(node) {
+    if (!(node instanceof BinaryTree)) {
+      node = new BinaryTree(node);
+    }
+    if (this.leftChild) {
+      node.leftChild = this.leftChild;
+      this.leftChild.parent = node;
+      this.leftChild = node;
+    } else {
+      this.leftChild = node;
+    }
+    node.parent = this;
+  }
+  insertRight(node) {
+    if (!(node instanceof BinaryTree)) {
+      node = new BinaryTree(node);
+    }
+    if (this.rightChild) {
+      node.rightChild = this.rightChild;
+      this.rightChild.parent = node;
+      this.rightChild = node;
+    } else {
+      this.rightChild = node;
+    }
+    node.parent = this;
+  }
+  getRightChild() {
+    return this.rightChild;
+  }
+  getLeftChild() {
+    return this.leftChild;
+  }
 
-export default BubbleSort;
+  getRootVal() {
+    return this.key;
+  }
+
+  setRootVal(val) {
+    this.key = val;
+  }
+  getParent() {
+    return this.parent;
+  }
+}
+
+export default BinaryTree;
+
+/* eslint-enable no-param-reassign */
 </code></pre>
         </article>
     </section>

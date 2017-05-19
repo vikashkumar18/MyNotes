@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: sort/BubbleSort.js</title>
+    <title>JSDoc: Source: tree/mirrorTree.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: sort/BubbleSort.js</h1>
+    <h1 class="page-title">Source: tree/mirrorTree.js</h1>
 
     
 
@@ -27,37 +27,28 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import 'babel-polyfill';
-
-const swap = (list, pos, nextPos) => {
-  const immutableList = Object.assign([], list);
-  const temp = immutableList[nextPos];
-  immutableList[nextPos] = immutableList[pos];
-  immutableList[pos] = temp;
-  return immutableList;
-};
 /**
- * Takes a list of values and returns a sorted list
- * @param {Array} list a collection of Number | String
+ * creates a mirror of a tree
+ * @param  {Object} tree of Type BinaryTree
+ * @return {Object} mirrorTree of type BinaryTree
+ *
+ *
  */
-const BubbleSort = list => {
-  let immutableList = Object.assign([], list);
-  const length = immutableList.length;
-  for (let i = 0; i &lt; length; i += 1) {
-    // j stands for the number of comparisins to be done
-    // 1. in the first pass there are n items so (n-1) no of comparisons
-    // will be done
-    // 2. in the second pass the last item is already in place so n-1 items
-    // are left to be sorted so (n-2) no of comparisons has to be done
-    for (let j = 0; j &lt; length - i - 1; j += 1) {
-      if (immutableList[j] > immutableList[j + 1]) {
-        immutableList = swap(immutableList, j, j + 1);
-      }
-    }
+const mirrorTree = tree => {
+  const leftChild = tree.getLeftChild();
+  const rightChild = tree.getRightChild();
+
+  if (!(rightChild &amp;&amp; leftChild)) {
+    return null;
   }
-  return immutableList;
+  tree.leftChild = rightChild;
+  tree.rightChild = leftChild;
+  mirrorTree(tree.getLeftChild());
+  mirrorTree(tree.getRightChild());
+  return tree;
 };
 
-export default BubbleSort;
+export default mirrorTree;
 </code></pre>
         </article>
     </section>
