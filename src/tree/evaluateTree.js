@@ -7,6 +7,11 @@ const operators = {
   '-': (a, b) => a - b
 };
 
+/**
+ * evaluates a binary tree expression
+ * @param  {BinaryTree} tree a binary tree expression
+ * @return {Number}     thie evaluated final result
+ */
 const evaluateTree = tree => {
   const rightChild = tree.getRightChild();
   const leftChild = tree.getLeftChild();

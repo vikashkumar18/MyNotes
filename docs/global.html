@@ -390,6 +390,319 @@ ascending order
 
     
 
+    <h4 class="name" id="buildParseTree"><span class="type-signature"></span>buildParseTree<span class="signature">(expr)</span><span class="type-signature"> &rarr; {<a href="BinaryTree.html">BinaryTree</a>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    builds a parse tree for a given expression using the following rules
+If the current token is a '(', add a new node as the left child of the current node, and descend   * to the left child.
+If the current token is in the list ['+','-','/','*'], set the root value of the current node to
+the operator represented by the current token. Add a new node as the right child of the current
+node and descend to the right child.
+If the current token is a number, set the root value of the current node to the number and return
+to the parent.
+If the current token is a ')', go to the parent of the current node.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">expression string must be <space> delimited</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tree_buildParseTree.js.html">tree/buildParseTree.js</a>, <a href="tree_buildParseTree.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    parsed binary tree
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="BinaryTree.html">BinaryTree</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="evaluateTree"><span class="type-signature"></span>evaluateTree<span class="signature">(tree)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+
+    
+
+
+
+<div class="description">
+    evaluates a binary tree expression
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tree</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BinaryTree.html">BinaryTree</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a binary tree expression</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tree_evaluateTree.js.html">tree/evaluateTree.js</a>, <a href="tree_evaluateTree.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    thie evaluated final result
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id="mirrorTree"><span class="type-signature"></span>mirrorTree<span class="signature">(tree)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 
     
@@ -864,13 +1177,13 @@ a bubble sort may have an advantage in that it will recognize the sorted list an
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryTree.html">BinaryTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#BinarySearch">BinarySearch</a></li><li><a href="global.html#BubbleSort">BubbleSort</a></li><li><a href="global.html#mirrorTree">mirrorTree</a></li><li><a href="global.html#SequentialSearch">SequentialSearch</a></li><li><a href="global.html#ShortBubbleSort">ShortBubbleSort</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryTree.html">BinaryTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#BinarySearch">BinarySearch</a></li><li><a href="global.html#BubbleSort">BubbleSort</a></li><li><a href="global.html#buildParseTree">buildParseTree</a></li><li><a href="global.html#evaluateTree">evaluateTree</a></li><li><a href="global.html#mirrorTree">mirrorTree</a></li><li><a href="global.html#SequentialSearch">SequentialSearch</a></li><li><a href="global.html#ShortBubbleSort">ShortBubbleSort</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat May 20 2017 01:22:04 GMT+0530 (IST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat May 20 2017 01:38:59 GMT+0530 (IST)
 </footer>
 
 <script> prettyPrint(); </script>
