@@ -11,6 +11,10 @@ const operators = {
  * evaluates a binary tree expression
  * @param  {BinaryTree} tree a binary tree expression
  * @return {Number}     thie evaluated final result
+ * @example
+ * // returns 35
+ * let parseTree = buildParseTree('( ( 5 * 3 ) + ( 4 * 5 ) )');
+ * evaluateTree(parseTree)
  */
 const evaluateTree = tree => {
   const rightChild = tree.getRightChild();

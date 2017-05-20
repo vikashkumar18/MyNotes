@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: sort/ShortBubbleSort.js</title>
+    <title>JSDoc: Module: BinaryTree</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,60 +17,57 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: sort/ShortBubbleSort.js</h1>
+    <h1 class="page-title">Module: BinaryTree</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import 'babel-polyfill';
+        
+    
+</header>
 
-const swap = (list, pos, nextPos) => {
-  const immutableList = Object.assign([], list);
-  const temp = immutableList[nextPos];
-  immutableList[nextPos] = immutableList[pos];
-  immutableList[pos] = temp;
-  return immutableList;
-};
-/**
- * @module ShortBubbleSort
- */
-/**
-* In particular, if during a pass there are no exchanges,
-* then we know that the list must be sorted.
-* A bubble sort can be modified to stop early if it finds that the list has become sorted.
-* This means that for lists that require just a few passes,
-* a bubble sort may have an advantage in that it will recognize the sorted list and stop.
- * @param {Array} list a collection of Number | String
- * @returns {Array} immutableList a collcetion of sorted Number | String
- */
-const ShortBubbleSort = list => {
-  let immutableList = Object.assign([], list);
-  const length = immutableList.length;
-  let exchange = true;
-  for (let i = 0; i &lt; length; i += 1) {
-    for (let j = 0; j &lt; length - i - 1; j += 1) {
-      if (immutableList[j] > immutableList[j + 1]) {
-        exchange = true;
-        immutableList = swap(immutableList, j, j + 1);
-      }
-    }
-    if (!exchange) {
-      break;
-    } else {
-      exchange = false;
-    }
-  }
-  return immutableList;
-};
+<article>
+    <div class="container-overview">
+    
+        
 
-export default ShortBubbleSort;
-</code></pre>
-        </article>
-    </section>
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-BinaryTree-BinaryTree.html">BinaryTree</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

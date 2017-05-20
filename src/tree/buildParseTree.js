@@ -15,6 +15,39 @@ import BinaryTree from './BinaryTree';
 * If the current token is a ')', go to the parent of the current node.
 * @param  {String} expr expression string must be <space> delimited
 * @return {BinaryTree}  parsed binary tree
+* @example
+* // returns
+* BinaryTree {
+*   key: '+',
+*   leftChild:
+*   BinaryTree {
+*   key: '*',
+*   leftChild: BinaryTree { key: 5,
+*                           leftChild: null,
+*                           rightChild: null,
+*                           parent: [Circular] },
+*   rightChild: BinaryTree { key: 3,
+*                            leftChild: null,
+*                            rightChild: null,
+*                            parent: [Circular] },
+*   parent: [Circular] },
+*   rightChild:
+*   BinaryTree {
+*   key: '*',
+*   leftChild: BinaryTree { key: 4,
+*                           leftChild: null,
+*                           rightChild: null,
+*                           parent: [Circular] },
+*   rightChild: BinaryTree { key: 5,
+*                           leftChild: null,
+*                           rightChild: null,
+*                            parent: [Circular] },
+*   parent: [Circular] },
+*   parent: null
+*   }
+*   buildParseTree('( ( 5 * 3 ) + ( 4 * 5 ) )')
+*
+*
 */
 const buildParseTree = expr => {
   // expression should have single space

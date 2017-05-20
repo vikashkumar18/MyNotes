@@ -1,7 +1,19 @@
 import 'babel-polyfill';
 /* eslint-disable no-param-reassign */
 /**
- * TBD: add notes
+ * @module BinaryTree
+ */
+/**
+ * @class BinaryTree
+ * @classdesc A tree consists of a set of nodes and a set of edges that connect pairs of nodes.
+ * A tree has the following properties:
+ *
+ * One node of the tree is designated as the root node.
+ * Every node n, except the root node,
+ * is connected by an edge from exactly one other node p,
+ * where p is the parent of n.
+ * A unique path traverses from the root to each node.
+ * If each node in the tree has a maximum of two children, we say that the tree is a Binary tree. 
  */
 class BinaryTree {
   constructor(root) {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: sort/ShortBubbleSort.js</title>
+    <title>JSDoc: Class: BinaryTree</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,60 +17,138 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: sort/ShortBubbleSort.js</h1>
+    <h1 class="page-title">Class: BinaryTree</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import 'babel-polyfill';
+        <h2>
+            <span class="ancestors"><a href="module-BinaryTree.html">BinaryTree</a>~</span>BinaryTree</h2>
+        
+            <div class="class-description">A tree consists of a set of nodes and a set of edges that connect pairs of nodes.
+A tree has the following properties:
 
-const swap = (list, pos, nextPos) => {
-  const immutableList = Object.assign([], list);
-  const temp = immutableList[nextPos];
-  immutableList[nextPos] = immutableList[pos];
-  immutableList[pos] = temp;
-  return immutableList;
-};
-/**
- * @module ShortBubbleSort
- */
-/**
-* In particular, if during a pass there are no exchanges,
-* then we know that the list must be sorted.
-* A bubble sort can be modified to stop early if it finds that the list has become sorted.
-* This means that for lists that require just a few passes,
-* a bubble sort may have an advantage in that it will recognize the sorted list and stop.
- * @param {Array} list a collection of Number | String
- * @returns {Array} immutableList a collcetion of sorted Number | String
- */
-const ShortBubbleSort = list => {
-  let immutableList = Object.assign([], list);
-  const length = immutableList.length;
-  let exchange = true;
-  for (let i = 0; i &lt; length; i += 1) {
-    for (let j = 0; j &lt; length - i - 1; j += 1) {
-      if (immutableList[j] > immutableList[j + 1]) {
-        exchange = true;
-        immutableList = swap(immutableList, j, j + 1);
-      }
-    }
-    if (!exchange) {
-      break;
-    } else {
-      exchange = false;
-    }
-  }
-  return immutableList;
-};
+One node of the tree is designated as the root node.
+Every node n, except the root node,
+is connected by an edge from exactly one other node p,
+where p is the parent of n.
+A unique path traverses from the root to each node.
+If each node in the tree has a maximum of two children, we say that the tree is a Binary tree.</div>
+        
+    
+</header>
 
-export default ShortBubbleSort;
-</code></pre>
-        </article>
-    </section>
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="BinaryTree"><span class="type-signature"></span>new BinaryTree<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tree_BinaryTree.js.html">tree/BinaryTree.js</a>, <a href="tree_BinaryTree.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

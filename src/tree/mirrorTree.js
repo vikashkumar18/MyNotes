@@ -4,6 +4,40 @@ import 'babel-polyfill';
  * @param  {Object} tree of Type BinaryTree
  * @return {Object} mirrorTree of type BinaryTree
  *
+ * @example
+ * // returns
+ * BinaryTree {
+ *  key: '+',
+ *  leftChild: BinaryTree {
+ *    key: '*',
+ *    leftChild: BinaryTree {
+ *                key: 5,
+ *                leftChild: null,
+ *                rightChild: null,
+ *                parent: [Circular] },
+ *    rightChild: BinaryTree {
+ *                 key: 4,
+ *                 leftChild: null,
+ *                 rightChild: null,
+ *                 parent: [Circular] },
+ *    parent: [Circular] },
+ *    rightChild: BinaryTree {
+ *                  key: '*',
+ *                  leftChild: BinaryTree {
+ *                              key: 3,
+ *                              leftChild: null,
+ *                              rightChild: null,
+ *                              parent: [Circular] },
+ *                  rightChild: BinaryTree {
+ *                              key: 5,
+ *                              leftChild: null,
+ *                              rightChild: null,
+ *                              parent: [Circular] },
+ *                 parent: [Circular] },
+ *  parent: null }
+ *
+ * let parseTree = buildParseTree('( ( 5 * 3 ) + ( 4 * 5 ) )');
+ * mirrorTree(parseTree)
  *
  */
 const mirrorTree = tree => {

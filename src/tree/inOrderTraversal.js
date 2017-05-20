@@ -5,6 +5,11 @@ import 'babel-polyfill';
  * left subtree, visit the root node, and finally do a recursive inorder
  * traversal of the right subtree.
  * @param  {BinaryTree} tree
+ * @example
+ * // returns
+ * ( ( ( (  5  ) * (  3  ) ) / ( (  2  ) - (  1  ) ) ) + ( (  4  ) * (  5  ) ) )
+ * let parseTree = buildParseTree('( ( ( 5 * 3 ) / ( 2 - 1 ) ) + ( 4 * 5 ) )');
+ * inOrderTraversal(parseTree)
  */
 
 const inOrderTraversal = tree => {
