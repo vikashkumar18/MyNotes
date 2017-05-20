@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: tree/evaluateTree.js</title>
+    <title>JSDoc: Source: tree/postOrderTraversal.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: tree/evaluateTree.js</h1>
+    <h1 class="page-title">Source: tree/postOrderTraversal.js</h1>
 
     
 
@@ -28,32 +28,21 @@
         <article>
             <pre class="prettyprint source linenums"><code>import 'babel-polyfill';
 
-const operators = {
-  '+': (a, b) => a + b,
-  '*': (a, b) => a * b,
-  '/': (a, b) => a / b,
-  '-': (a, b) => a - b
-};
-
 /**
- * evaluates a binary tree expression
- * @param  {BinaryTree} tree a binary tree expression
- * @return {Number}     thie evaluated final result
+ * In a postorder traversal, we recursively do a postorder
+ *  traversal of the left subtree and the right subtree
+ *  followed by a visit to the root node.
+ * @param  {BinaryTree} tree
  */
-const evaluateTree = tree => {
-  const rightChild = tree.getRightChild();
-  const leftChild = tree.getLeftChild();
-
-  if (rightChild &amp;&amp; leftChild) {
-    const operator = tree.getRootVal();
-    const fn = operators[operator];
-    return fn(evaluateTree(rightChild), evaluateTree(leftChild));
+const postOrderTraversal = tree => {
+  if (tree) {
+    postOrderTraversal(tree.getLeftChild());
+    postOrderTraversal(tree.getRightChild());
+    console.log(tree.getRootVal());
   }
-  // if there is no child
-  return tree.getRootVal();
 };
 
-export default evaluateTree;
+export default postOrderTraversal;
 </code></pre>
         </article>
     </section>

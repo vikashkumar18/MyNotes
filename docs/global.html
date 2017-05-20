@@ -398,11 +398,15 @@ ascending order
 
 <div class="description">
     builds a parse tree for a given expression using the following rules
-If the current token is a '(', add a new node as the left child of the current node, and descend   * to the left child.
-If the current token is in the list ['+','-','/','*'], set the root value of the current node to
-the operator represented by the current token. Add a new node as the right child of the current
+If the current token is a '(', add a new node as the left child of the
+current node, and descend   * to the left child.
+If the current token is in the list ['+','-','/','*'], set the root value
+of the current node to
+the operator represented by the current token. Add a new node as the
+ right child of the current
 node and descend to the right child.
-If the current token is a number, set the root value of the current node to the number and return
+If the current token is a number, set the root value of the current
+ node to the number and return
 to the parent.
 If the current token is a ')', go to the parent of the current node.
 </div>
@@ -497,7 +501,7 @@ If the current token is a ')', go to the parent of the current node.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="tree_buildParseTree.js.html">tree/buildParseTree.js</a>, <a href="tree_buildParseTree.js.html#line15">line 15</a>
+        <a href="tree_buildParseTree.js.html">tree/buildParseTree.js</a>, <a href="tree_buildParseTree.js.html#line19">line 19</a>
     </li></ul></dd>
     
 
@@ -703,6 +707,139 @@ If the current token is a ')', go to the parent of the current node.
 
     
 
+    <h4 class="name" id="inOrderTraversal"><span class="type-signature"></span>inOrderTraversal<span class="signature">(tree)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    In an inorder traversal, we recursively do an inorder traversal on the
+left subtree, visit the root node, and finally do a recursive inorder
+traversal of the right subtree.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tree</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BinaryTree.html">BinaryTree</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tree_inOrderTraversal.js.html">tree/inOrderTraversal.js</a>, <a href="tree_inOrderTraversal.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id="mirrorTree"><span class="type-signature"></span>mirrorTree<span class="signature">(tree)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 
     
@@ -848,6 +985,272 @@ If the current token is a ')', go to the parent of the current node.
 </dl>
 
     
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="postOrderTraversal"><span class="type-signature"></span>postOrderTraversal<span class="signature">(tree)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    In a postorder traversal, we recursively do a postorder
+ traversal of the left subtree and the right subtree
+ followed by a visit to the root node.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tree</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BinaryTree.html">BinaryTree</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tree_postOrderTraversal.js.html">tree/postOrderTraversal.js</a>, <a href="tree_postOrderTraversal.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="preOrderTraversal"><span class="type-signature"></span>preOrderTraversal<span class="signature">(tree)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    In a preorder traversal, we visit the root node first,
+then recursively do a preorder traversal of the left subtree,
+followed by a recursive preorder traversal of the right subtree.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tree</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BinaryTree.html">BinaryTree</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Expression tree</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tree_preOrderTraversal.js.html">tree/preOrderTraversal.js</a>, <a href="tree_preOrderTraversal.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1177,13 +1580,13 @@ a bubble sort may have an advantage in that it will recognize the sorted list an
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryTree.html">BinaryTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#BinarySearch">BinarySearch</a></li><li><a href="global.html#BubbleSort">BubbleSort</a></li><li><a href="global.html#buildParseTree">buildParseTree</a></li><li><a href="global.html#evaluateTree">evaluateTree</a></li><li><a href="global.html#mirrorTree">mirrorTree</a></li><li><a href="global.html#SequentialSearch">SequentialSearch</a></li><li><a href="global.html#ShortBubbleSort">ShortBubbleSort</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryTree.html">BinaryTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#BinarySearch">BinarySearch</a></li><li><a href="global.html#BubbleSort">BubbleSort</a></li><li><a href="global.html#buildParseTree">buildParseTree</a></li><li><a href="global.html#evaluateTree">evaluateTree</a></li><li><a href="global.html#inOrderTraversal">inOrderTraversal</a></li><li><a href="global.html#mirrorTree">mirrorTree</a></li><li><a href="global.html#postOrderTraversal">postOrderTraversal</a></li><li><a href="global.html#preOrderTraversal">preOrderTraversal</a></li><li><a href="global.html#SequentialSearch">SequentialSearch</a></li><li><a href="global.html#ShortBubbleSort">ShortBubbleSort</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat May 20 2017 01:38:59 GMT+0530 (IST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat May 20 2017 09:17:54 GMT+0530 (IST)
 </footer>
 
 <script> prettyPrint(); </script>

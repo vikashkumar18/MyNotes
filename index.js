@@ -6,6 +6,9 @@ import BinaryTree from './src/tree/BinaryTree';
 import buildParseTree from './src/tree/buildParseTree';
 import mirrorTree from './src/tree/mirrorTree';
 import evaluateTree from './src/tree/evaluateTree';
+import preOrderTraversal from './src/tree/preOrderTraversal';
+import inOrderTraversal from './src/tree/inOrderTraversal';
+import postOrderTraversal from './src/tree/postOrderTraversal';
 
 console.log('/***Sequential Search***/');
 console.log(SequentialSearch([1, 3, 4], 4));
@@ -40,7 +43,7 @@ console.log(r.getRightChild().getRootVal());
 console.log('/***Binary Tree***/');
 
 console.log('/***Build Parse Tree***/');
-const parseTree = buildParseTree('( ( 5 * 3 ) + ( 4 * 5 ) )');
+let parseTree = buildParseTree('( ( 5 * 3 ) + ( 4 * 5 ) )');
 console.log(parseTree);
 console.log('/***Build Parse Tree***/');
 
@@ -51,3 +54,17 @@ console.log('/***Build Mirror Tree***/');
 console.log('/***Evaluate Tree***/');
 console.log(evaluateTree(parseTree));
 console.log('/***Evaluate Tree***/');
+
+parseTree = buildParseTree('( ( ( 5 * 3 ) / ( 2 - 1 ) ) + ( 4 * 5 ) )');
+
+console.log('/***Pre-Order traversal tree***/');
+preOrderTraversal(parseTree);
+console.log('/***Pre-Order traversal tree***/');
+
+console.log('/***In-Order traversal tree***/');
+console.log(inOrderTraversal(parseTree));
+console.log('/***In-Order traversal tree***/');
+
+console.log('/***Post-Order traversal tree***/');
+postOrderTraversal(parseTree);
+console.log('/***Post-Order traversal tree***/');
