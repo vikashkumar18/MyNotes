@@ -4,6 +4,7 @@ import 'babel-polyfill';
  * In a preorder traversal, we visit the root node first,
  * then recursively do a preorder traversal of the left subtree,
  * followed by a recursive preorder traversal of the right subtree.
+ * @function preOrderTraversal
  * @param  {BinaryTree} tree Expression tree
  * @example
  * // returns

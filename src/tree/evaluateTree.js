@@ -9,6 +9,7 @@ const operators = {
 
 /**
  * evaluates a binary tree expression
+ * @function evaluateTree
  * @param  {BinaryTree} tree a binary tree expression
  * @return {Number}     thie evaluated final result
  * @example

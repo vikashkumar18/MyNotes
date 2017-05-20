@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 /**
  * creates a mirror of a tree
+ * @function mirrorTree
  * @param  {Object} tree of Type BinaryTree
  * @return {Object} mirrorTree of type BinaryTree
  *

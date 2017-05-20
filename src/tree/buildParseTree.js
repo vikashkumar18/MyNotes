@@ -13,6 +13,7 @@ import BinaryTree from './BinaryTree';
 *  node to the number and return
 * to the parent.
 * If the current token is a ')', go to the parent of the current node.
+* @function  buildParseTree
 * @param  {String} expr expression string must be <space> delimited
 * @return {BinaryTree}  parsed binary tree
 * @example
