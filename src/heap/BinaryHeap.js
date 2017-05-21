@@ -167,6 +167,10 @@ class BinaryHeap {
    * O(n) operations to shift the rest of the list over to make room for the new key. Therefore,
    * to insert n keys into the heap would require a total of O(n log n) operations. However,
    * if we start with an entire list then we can build the whole heap in O(n) operations.
+   * @param {Array} list to be converted to binary heap
+   * @return {Array} converted list of binary heap
+   * @memberof module:BinaryHeap
+   * @instance
    */
   buildHeap(list) {
     let i = Math.floor(list.length / 2);
