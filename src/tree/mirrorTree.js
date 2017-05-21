@@ -48,8 +48,10 @@ const mirrorTree = tree => {
   if (!(rightChild && leftChild)) {
     return null;
   }
+  /* eslint-disable no-param-reassign */
   tree.leftChild = rightChild;
   tree.rightChild = leftChild;
+  /* eslint-enable no-param-reassign */
   mirrorTree(tree.getLeftChild());
   mirrorTree(tree.getRightChild());
   return tree;

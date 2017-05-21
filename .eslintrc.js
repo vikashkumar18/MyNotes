@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['import'],
   rules: {
     'arrow-parens': 'off',
-    'no-console': 'off'
+    'no-console': 'off',
+    'comma-dangle': 'off'
   }
 };
