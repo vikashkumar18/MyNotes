@@ -4,6 +4,7 @@ module.exports = {
   rules: {
     'arrow-parens': 'off',
     'no-console': 'off',
-    'comma-dangle': 'off'
+    'comma-dangle': 'off',
+    'no-plusplus': 'off'
   }
 };

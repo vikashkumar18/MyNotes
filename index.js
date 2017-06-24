@@ -2,6 +2,7 @@ import SequentialSearch from './src/search/SequentialSearch';
 import BinarySearch from './src/search/BinarySearch';
 import BubbleSort from './src/sort/BubbleSort';
 import ShortBubbleSort from './src/sort/ShortBubbleSort';
+import InsertionSort from './src/sort/InsertionSort';
 import BinaryTree from './src/tree/BinaryTree';
 import buildParseTree from './src/tree/buildParseTree';
 import mirrorTree from './src/tree/mirrorTree';
@@ -27,6 +28,10 @@ console.log('/***Bubble Sort***/');
 console.log('/***Short Bubble Sort***/');
 console.log(ShortBubbleSort([30, 5, 21, 1, 3, 7, 89, 99]));
 console.log('/***Short Bubble Sort***/');
+console.log('/***Insertion Sort***/');
+console.log(InsertionSort(['dbc', 'aa', 'hij', 'bb', 'cbe', 'nop', 'efg', 'qrs', 'tuv', 'klm']));
+console.log(InsertionSort([30, 5, 21, 1, 3, 7, 89, 99]));
+console.log('/***Insertion Sort***/');
 
 console.log('/***Binary Tree***/');
 
